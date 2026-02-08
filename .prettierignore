@@ -1,0 +1,6 @@
+# .eslintignore et .prettierignore (même contenu)
+node_modules
+dist
+build
+*.min.js
+vite.config.js.timestamp-*
