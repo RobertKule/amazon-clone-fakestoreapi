@@ -1,18 +1,34 @@
-import React from 'react'
-import Layout from './components/layout/Layout'
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
-import './index.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Cart from './pages/Cart';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import Orders from './pages/orders/Orders';
+import NotFound from './pages/NotFound';
+import './App.css';
+
 function App() {
   return (
-    <>
-      <Layout>
-        <h2 className="text-3xl font-bold mb-4">Welcome to My Website</h2>
-        <p className="text-lg mb-4">This is a simple React application with a layout component.</p>
-        <p className="text-lg">You can add more content here as needed.</p>
-      </Layout>
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Layout principal pour toutes les pages */}
+        <Route path="/" element={<Layout />}>
+          {/* Routes publiques */}
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="orders" element={<Orders />} />
+
+          {/* Page 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
