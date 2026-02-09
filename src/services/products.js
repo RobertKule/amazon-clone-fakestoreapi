@@ -51,7 +51,10 @@ export const productsService = {
       const response = await api.get(`/products/category/${category}`);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la récupération des produits de la catégorie ${category}:`, error);
+      console.error(
+        `Erreur lors de la récupération des produits de la catégorie ${category}:`,
+        error
+      );
       throw error;
     }
   },
@@ -62,10 +65,11 @@ export const productsService = {
   searchProducts: async (query) => {
     try {
       const allProducts = await this.getAllProducts();
-      return allProducts.filter(product =>
-        product.title.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase()) ||
-        product.category.toLowerCase().includes(query.toLowerCase())
+      return allProducts.filter(
+        (product) =>
+          product.title.toLowerCase().includes(query.toLowerCase()) ||
+          product.description.toLowerCase().includes(query.toLowerCase()) ||
+          product.category.toLowerCase().includes(query.toLowerCase())
       );
     } catch (error) {
       console.error('Erreur lors de la recherche de produits:', error);
@@ -81,7 +85,10 @@ export const productsService = {
       const response = await api.get(`/products?limit=${limit}`);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la récupération de ${limit} produits:`, error);
+      console.error(
+        `Erreur lors de la récupération de ${limit} produits:`,
+        error
+      );
       throw error;
     }
   },

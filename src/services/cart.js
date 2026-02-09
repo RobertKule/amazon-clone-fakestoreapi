@@ -77,7 +77,10 @@ export const cartService = {
       const response = await api.get(`/carts/user/${userId}`);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la récupération du panier utilisateur ${userId}:`, error);
+      console.error(
+        `Erreur lors de la récupération du panier utilisateur ${userId}:`,
+        error
+      );
       throw error;
     }
   },
