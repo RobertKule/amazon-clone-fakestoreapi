@@ -25,7 +25,10 @@ export const usersService = {
       const response = await api.get(`/users/${id}`);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la récupération de l'utilisateur ${id}:`, error);
+      console.error(
+        `Erreur lors de la récupération de l'utilisateur ${id}:`,
+        error
+      );
       throw error;
     }
   },
@@ -38,7 +41,7 @@ export const usersService = {
       const response = await api.post('/users', userData);
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de l\'ajout de l\'utilisateur:', error);
+      console.error("Erreur lors de l'ajout de l'utilisateur:", error);
       throw error;
     }
   },
@@ -51,7 +54,10 @@ export const usersService = {
       const response = await api.put(`/users/${id}`, userData);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la mise à jour de l'utilisateur ${id}:`, error);
+      console.error(
+        `Erreur lors de la mise à jour de l'utilisateur ${id}:`,
+        error
+      );
       throw error;
     }
   },
@@ -64,7 +70,10 @@ export const usersService = {
       const response = await api.delete(`/users/${id}`);
       return response.data;
     } catch (error) {
-      console.error(`Erreur lors de la suppression de l'utilisateur ${id}:`, error);
+      console.error(
+        `Erreur lors de la suppression de l'utilisateur ${id}:`,
+        error
+      );
       throw error;
     }
   },
