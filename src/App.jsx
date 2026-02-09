@@ -8,6 +8,7 @@ import Register from './pages/auth/Register';
 import Orders from './pages/orders/Orders';
 import NotFound from './pages/NotFound';
 import './App.css';
+import OrderDetailPage from './pages/OrderDetailPage';
 
 function App() {
   return (
