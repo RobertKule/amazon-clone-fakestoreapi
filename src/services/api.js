@@ -17,12 +17,14 @@ api.interceptors.request.use(
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-    
+
     // Log en mode développement
     if (import.meta.env.VITE_ENABLE_DEBUG === 'true') {
-      console.log(`[API Request] ${config.method?.toUpperCase()} ${config.url}`);
+      console.log(
+        `[API Request] ${config.method?.toUpperCase()} ${config.url}`
+      );
     }
-    
+
     return config;
   },
   (error) => {
@@ -42,7 +44,7 @@ api.interceptors.response.use(
   (error) => {
     // Gestion centralisée des erreurs
     console.error('[API Error]', error.response || error.message);
-    
+
     // Gestion des erreurs spécifiques
     if (error.response) {
       switch (error.response.status) {
@@ -63,7 +65,7 @@ api.interceptors.response.use(
           console.error(`Erreur ${error.response.status}`);
       }
     }
-    
+
     return Promise.reject(error);
   }
 );

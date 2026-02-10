@@ -10,22 +10,22 @@ export const authService = {
   login: async (credentials) => {
     try {
       const response = await api.post('/auth/login', credentials);
-      
+
       if (response.data.token) {
         // Stocker le token
         localStorage.setItem('authToken', response.data.token);
         localStorage.setItem('user', JSON.stringify(response.data));
       }
-      
+
       return response.data;
     } catch (error) {
       console.error('Erreur lors de la connexion:', error);
-      
+
       // Fournir un message d'erreur plus clair
       if (error.response?.status === 401) {
         throw new Error('Identifiants incorrects');
       }
-      
+
       throw error;
     }
   },
