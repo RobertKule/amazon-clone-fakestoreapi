@@ -22,7 +22,7 @@
 - `POST /auth/login` - Connexion
   ```json
   {
-    "username": "Robertd",
+    "username": "Robert",
     "password": "m38rmF$"
   }
 
