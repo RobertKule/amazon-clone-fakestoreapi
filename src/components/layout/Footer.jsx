@@ -1,157 +1,94 @@
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 /**
- * Footer de l'application avec liens et informations
+ * Footer minimaliste conforme au design de la maquette
  */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-amazon-dark text-white mt-auto">
-      <div className="container mx-auto px-4 py-8">
-        {/* Liens principaux */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* À propos */}
+    <footer className="bg-white border-t border-gray-200 pt-16 pb-8 font-sans">
+      <div className="max-w-[1200px] mx-auto px-4">
+        
+        {/* Grille principale à 4 colonnes */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          
+          {/* Get to Know Us */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">À propos</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white">
-                  Notre entreprise
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-300 hover:text-white">
-                  Carrières
-                </Link>
-              </li>
-              <li>
-                <Link to="/press" className="text-gray-300 hover:text-white">
-                  Presse
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/investors"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Investisseurs
-                </Link>
-              </li>
+            <h3 className="text-gray-900 font-bold text-[13px] mb-4 uppercase tracking-tight">Get to Know Us</h3>
+            <ul className="space-y-1 text-[11px] text-gray-500 font-medium">
+              <li><Link to="#" className="hover:underline">Careers</Link></li>
+              <li><Link to="#" className="hover:underline">Blog</Link></li>
+              <li><Link to="#" className="hover:underline">About Amazon</Link></li>
+              <li><Link to="#" className="hover:underline">Investor Relations</Link></li>
+              <li><Link to="#" className="hover:underline">Amazon Devices</Link></li>
+              <li><Link to="#" className="hover:underline">Amazon Tours</Link></li>
             </ul>
           </div>
 
-          {/* Aide */}
+          {/* Make Money with Us */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Aide</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/help" className="text-gray-300 hover:text-white">
-                  Centre d'aide
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white">
-                  Contactez-nous
-                </Link>
-              </li>
-              <li>
-                <Link to="/shipping" className="text-gray-300 hover:text-white">
-                  Livraison
-                </Link>
-              </li>
-              <li>
-                <Link to="/returns" className="text-gray-300 hover:text-white">
-                  Retours
-                </Link>
-              </li>
+            <h3 className="text-gray-900 font-bold text-[13px] mb-4 uppercase tracking-tight">Make Money with Us</h3>
+            <ul className="space-y-1 text-[11px] text-gray-500 font-medium">
+              <li><Link to="#" className="hover:underline">Sell products on Amazon</Link></li>
+              <li><Link to="#" className="hover:underline">Sell apps on Amazon</Link></li>
+              <li><Link to="#" className="hover:underline">Become an Affiliate</Link></li>
+              <li><Link to="#" className="hover:underline">Advertise Your Products</Link></li>
+              <li><Link to="#" className="hover:underline">Self-Publish with Us</Link></li>
+              <li><Link to="#" className="hover:underline">Host an Amazon Hub</Link></li>
+              <li><Link to="#" className="hover:underline">› See More Money with Us</Link></li>
             </ul>
           </div>
 
-          {/* Légal */}
+          {/* Let Us Help You */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Légal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-white">
-                  Confidentialité
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-gray-300 hover:text-white">
-                  Conditions d'utilisation
-                </Link>
-              </li>
-              <li>
-                <Link to="/cookies" className="text-gray-300 hover:text-white">
-                  Cookies
-                </Link>
-              </li>
-              <li>
-                <Link to="/legal" className="text-gray-300 hover:text-white">
-                  Mentions légales
-                </Link>
-              </li>
+            <h3 className="text-gray-900 font-bold text-[13px] mb-4 uppercase tracking-tight">Let Us Help You</h3>
+            <ul className="space-y-1 text-[11px] text-gray-500 font-medium">
+              <li><Link to="#" className="hover:underline">Amazon and COVID-19</Link></li>
+              <li><Link to="#" className="hover:underline">Your Account</Link></li>
+              <li><Link to="#" className="hover:underline">Your Orders</Link></li>
+              <li><Link to="#" className="hover:underline">Shipping Rates & Policies</Link></li>
+              <li><Link to="#" className="hover:underline">Returns & Replacements</Link></li>
+              <li><Link to="#" className="hover:underline">Manage Your Content and Devices</Link></li>
+              <li><Link to="#" className="hover:underline">Amazon Assistant</Link></li>
+              <li><Link to="#" className="hover:underline">Help</Link></li>
             </ul>
           </div>
 
-          {/* Suivez-nous */}
+          {/* Amazon Payment Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Suivez-nous</h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub className="text-2xl" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaTwitter className="text-2xl" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin className="text-2xl" />
-              </a>
+            <h3 className="text-gray-900 font-bold text-[13px] mb-4 uppercase tracking-tight">Amazon Payment Products</h3>
+            <ul className="space-y-1 text-[11px] text-gray-500 font-medium">
+              <li><Link to="#" className="hover:underline">Amazon Business Card</Link></li>
+              <li><Link to="#" className="hover:underline">Shop with Points</Link></li>
+              <li><Link to="#" className="hover:underline">Reload Your Balance</Link></li>
+              <li><Link to="#" className="hover:underline">Amazon Currency Converter</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Lien "View more information" central */}
+        <div className="text-center mb-8">
+          <Link to="#" className="text-gray-600 text-[11px] font-medium hover:underline flex items-center justify-center">
+            View more information <span className="ml-1 text-[8px]">▼</span>
+          </Link>
+        </div>
+
+        {/* Ligne de séparation et Copyright final */}
+        <div className="border-t border-gray-100 pt-8">
+          <div className="flex flex-col items-center">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mb-4 text-[10px] text-gray-400">
+              <Link to="#" className="hover:underline">Conditions of Use</Link>
+              <Link to="#" className="hover:underline">Privacy Notice</Link>
+              <Link to="#" className="hover:underline">Interest-Based Ads</Link>
+            </div>
+            
+            <div className="text-[10px] text-gray-400">
+              © 1996-{currentYear}, Amazon.com, Inc. or its affiliates
             </div>
           </div>
         </div>
 
-        {/* Séparateur */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Copyright */}
-            <div className="mb-4 md:mb-0">
-              <p className="text-gray-300">
-                &copy; {currentYear} Amazon Clone. Projet éducatif développé par
-                Afrix Global - Groupe 1.
-              </p>
-            </div>
-
-            {/* Langue et pays */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-300">🌐</span>
-                <select className="bg-transparent text-gray-300 border-none focus:outline-none">
-                  <option>Français</option>
-                  <option>English</option>
-                </select>
-              </div>
-              <div className="text-gray-300">🇫🇷 France</div>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );
