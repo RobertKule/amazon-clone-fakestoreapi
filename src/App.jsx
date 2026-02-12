@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/layout/Header';
 import Cart from "./pages/Cart";
+import ProductDetail from "./pages/Products"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* Page */}
       <main className="mt-6">
         <Cart />
+        <ProductDetail />
       </main>
     </div>
   );
